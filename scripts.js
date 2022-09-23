@@ -4,22 +4,35 @@ const action = operacion => {
     let num2 = document.getElementById("num_2").value;
     let op = operacion.value;
 
-    if (num1 == null || num2 == null || num1 == "" || num2 == "") {
-        alert("Debe ingresar valores");
-    } else {
-
+   
         switch (op) {
             case "+":
-                document.getElementById("result").value = parseFloat(num1) + parseFloat(num2);
+                if (num1 == null || num2 == null || num1 == "" || num2 == "") {
+                    alert("Debe ingresar valores");
+                }else{ 
+                    document.getElementById("result").value = parseFloat(num1) + parseFloat(num2);
+                }
                 break;
             case "-":
-                document.getElementById("result").value = parseFloat(num1) - parseFloat(num2);
+                if (num1 == null || num2 == null || num1 == "" || num2 == "") {
+                    alert("Debe ingresar valores");
+                }else{ 
+                    document.getElementById("result").value = parseFloat(num1) - parseFloat(num2);
+                }
                 break;
             case "*":
-                document.getElementById("result").value = parseFloat(num1) * parseFloat(num2);
+                if (num1 == null || num2 == null || num1 == "" || num2 == "") {
+                    alert("Debe ingresar valores");
+                }else{ 
+                    document.getElementById("result").value = parseFloat(num1) * parseFloat(num2);
+                }
                 break;
             case "/":
-                document.getElementById("result").value = parseFloat(num1) / parseFloat(num2);
+                if (num1 == null || num2 == null || num1 == "" || num2 == "") {
+                    alert("Debe ingresar valores");
+                }else{ 
+                    document.getElementById("result").value = parseFloat(num1) / parseFloat(num2);
+                }
                 break;
             case "C":
                 res = null;
@@ -28,5 +41,5 @@ const action = operacion => {
                 document.getElementById("num_2").value = "";
                 break;
         }
-    }
+    
 }
